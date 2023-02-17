@@ -14,4 +14,4 @@ jobs:
         with:
           type: now
           target_branch: develop
-          github_token: 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
+          github_token: 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
