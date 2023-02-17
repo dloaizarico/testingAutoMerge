@@ -14,7 +14,7 @@ jobs:
         with:
           token: ${{ secrets.personal_access_token }}
       - name: master back to develop
-      run: |
+        run: |
           git fetch --unshallow
           git checkout develop
           git pull
