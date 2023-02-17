@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Merge master back to dev
-      uses: actions/checkout@v2
       with:
           token: ${{ secrets.personal_access_token }}
       run: |
