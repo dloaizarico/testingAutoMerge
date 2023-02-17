@@ -13,7 +13,7 @@ jobs:
       - name: git checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.personal_access_token }}
+          token: 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
 
       - name: master back to develop
         run: |
