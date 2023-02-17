@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Changing this as a hotfix appending more things. more and more nad more.aaaaaaaaaaaa
+          Changing this as a hotfix appending more things. more and more nad more.aaaaaaaaaaaaaaa
         </a>
       </header>
     </div>
