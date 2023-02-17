@@ -1,18 +1,17 @@
-name: PRs to master
-on: 
-  pull_request:
-    branches: [master]
-    types: [closed]
+name: Merge any release branch to uat
+on:
+  push:
+    branches:
+      - 'master'
 jobs:
-  merge-master-back-to-dev:
-    if: github.event.pull_request.merged == true
-    timeout-minutes: 4
+  merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: master back to develop
-        run: |
-          git fetch --unshallow
-          git checkout develop
-          git pull
-          git merge --no-ff master -m "Auto-merge master back to develop"
-          git push
+      - uses: actions/checkout@v3
+
+      - name: Merge feature/xxx -> main
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: master
+          github_token: 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
