@@ -6,11 +6,13 @@ on:
 jobs:
   merge-master-back-to-dev:
     if: github.event.pull_request.merged == true
-    timeout-minutes: 2
+    timeout-minutes: 4
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set Git config
+    - with:
+          token: ${{ secrets.personal_access_token }}
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
